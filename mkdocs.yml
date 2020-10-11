@@ -6,12 +6,14 @@ repo_name: 'alex3305/home-assistant-docs'
 repo_url: 'https://github.com/alex3305/home-assistant-docs/'
 nav:
   - Home: index.md
+  - Installation: hardware/host-system.md
+
 theme:
   name: 'material'
   palette:
     scheme: slate
     primary: light blue
-    ccent: teal
+    accent: teal
   icon:
     logo: material/home-heart
 
