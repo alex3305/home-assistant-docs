@@ -1,10 +1,17 @@
-site_name: Test docs
-site_description: 'A docs test'
-site_author: 'Michael Hausenblas'
+site_name: Alex's Home Assistant documentation
+site_description: 'Compilation and reference of important home automation'
+site_author: 'Alex van den Hoogen'
 docs_dir: docs/
-repo_name: 'mhausenblas/actions-sandbox'
-repo_url: 'https://github.com/mhausenblas/actions-sandbox'
+repo_name: 'alex3305/home-assistant-docs'
+repo_url: 'https://github.com/alex3305/home-assistant-docs/'
 nav:
-    - Home: index.md
+  - Home: index.md
 theme:
   name: 'material'
+  palette:
+    scheme: slate
+    primary: light blue
+    ccent: teal
+  icon:
+    logo: material/home-heart
+
