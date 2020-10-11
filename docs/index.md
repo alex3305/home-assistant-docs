@@ -40,7 +40,21 @@ tbd.
 
 ### Home Assistant add-ons
 
-tbd.
+* AdGuard Home
+* [Ansible Vault](https://alxx.nl/hassio-addons/tree/master/ansible-vault)
+* Bitwarden RS
+* Check Home Assistant configuration
+* Git pull
+* [InfluxDB](add-ons/influxdb.md)
+* MariaDB
+* Mosquitto broker
+* Plex Media Server
+* [Rclone](https://alxx.nl/hassio-addons/tree/master/rclone)
+* Samba share
+* Tautulli
+* [Traefik](https://alxx.nl/hassio-addons/tree/master/traefik)
+* WireGuard
+* deCONZ
 
 ### Home Assistant integrations
 
