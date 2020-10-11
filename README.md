@@ -1,3 +1,3 @@
-# Example MkDocs deploy GitHub Action
+# alex3305's Home Assistant documentation
 
-This is a template that uses the  [MkDocs deploy](https://github.com/marketplace/actions/deploy-mkdocs) GitHub action.
+This repo contains my personal Home Assistant documentation, but can of course be used as a reference for more general Home Assistant knowledge.
