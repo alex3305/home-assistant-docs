@@ -8,7 +8,10 @@ nav:
   - Home: index.md
   - Installation: hardware/host-system.md
   - Add-ons:
-    - InfluxDB: add-ons/influxdb.md
+    - InfluxDB: 
+      - Installation: add-ons/influxdb.md
+      - Backup and restore: add-ons/influxdb-backup.md
+      - Downsampling (RP/CQ): add-ons/influxdb-downsampling.md
 
 theme:
   name: 'material'
