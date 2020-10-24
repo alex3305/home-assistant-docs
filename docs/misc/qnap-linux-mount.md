@@ -2,7 +2,9 @@
 
 I recently migrated to a QNAP NAS from an old DIY NAS for most of my home data. When starting to copy over my first batch of data I worked out that the data transfer was going to take about 12 - 18 hours on my 1GBps home network...
 
-This was unacceptable to me, so I tried mounting my new shiny QNAP NAS disk (readily formatted) inside my old DIY NAS to speed up the transfer. This was a bit harder than anticipated, so I documented my steps.
+This was unacceptable to me, so I tried mounting my new shiny QNAP NAS disk (readily formatted) inside my old DIY NAS to speed up the transfer. After doing this, the transfer was about 6 times faster than copying all data over my network.
+
+All in all this was a bit harder than anticipated, so I documented my steps.
 
 > _**NOTE** This guide may not work for every RAID setup, but can provide a simple reference_
 
