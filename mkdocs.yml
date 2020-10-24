@@ -12,6 +12,8 @@ nav:
       - Installation: add-ons/influxdb.md
       - Backup and restore: add-ons/influxdb-backup.md
       - Downsampling (RP/CQ): add-ons/influxdb-downsampling.md
+  - Miscellaneous:
+    - Mounting QNAP disks in Debian Linux: misc/qnap-linux-mount.md
 
 theme:
   name: 'material'
