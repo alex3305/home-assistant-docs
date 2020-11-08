@@ -1,10 +1,10 @@
 # Bitwarden secrets for Home Assistant set up
 
-This page outlines my personal set up with [Bitwarden secrets for Home Assistant](https://alxx.nl/hassio-addons/blob/master/bitwarden-secrets/README.md).
+This page outlines my personal set up with [Bitwarden secrets for Home Assistant](https://alxx.nl/home-assistant-addons/blob/master/bitwarden-secrets/README.md).
 
 ## Bitwarden installation
 
-You can easily install [Bitwarden RS](https://github.com/hassio-addons/addon-bitwarden) for Home Assistant from the Add-on Store. Bitwarden is a community maintained add-on available from the Home Assistant Community Add-ons repository.
+You can easily install [Bitwarden RS](https://github.com/home-assistant-addons/addon-bitwarden) for Home Assistant from the Add-on Store. Bitwarden is a community maintained add-on available from the Home Assistant Community Add-ons repository.
 
 ## Home Assistant organization
 
@@ -22,7 +22,7 @@ You can use the Bitwarden password generator to generate a secure password for t
 
 ### Disable new registrations
 
-When you have Bitwarden exposed to the internet (ie. through a reverse proxy like [Traefik](https://alxx.nl/hassio-addons/tree/master/traefik)) I recommend disabling new user registration after you have created all of your users. This will keep unwelcome guests out of our local install.
+When you have Bitwarden exposed to the internet (ie. through a reverse proxy like [Traefik](https://alxx.nl/home-assistant-addons/tree/master/traefik)) I recommend disabling new user registration after you have created all of your users. This will keep unwelcome guests out of our local install.
 
 You can do this by browsing to the Bitwarden RS suffixed by the `/admin/` path. So for instance: 'http://192.168.0.10:7878/admin/'. To access the admin panel you will need your personal access token which can be found in the add-on log.
 
@@ -71,7 +71,7 @@ Adding secrets for use in Home Assistant is fairly trivial. You can add items th
 Follow these steps to get the add-on installed on your system:
 
 1. Navigate in your Home Assistant frontend to __Supervisor -> Add-on Store__
-2. Add this new repository by URL (`https://github.com/alex3305/hassio-addons`)
+2. Add this new repository by URL (`https://github.com/alex3305/home-assistant-addons`)
 3. Find the "Bitwarden secrets for Home Assistant" add-on and click it.
 4. Click on the "INSTALL" button
 

@@ -10,7 +10,7 @@ Before starting with Home Assistant in november 2018, I used a [Raspberry Pi 3B+
 
 The initial migration was quite tricky, but after a long week of trial and error, I haven't looked back since...
 
-Since than I migrated to an Intel NUC like device, expanded my Z-Wave network and added Zigbee devices, contributed to Home Assistant and even created my own [Home Assistant add-ons](http://alxx.nl/hassio-addons).
+Since than I migrated to an Intel NUC like device, expanded my Z-Wave network and added Zigbee devices, contributed to Home Assistant and even created my own [Home Assistant add-ons](http://alxx.nl/home-assistant-addons).
 
 ## Hardware
 
@@ -41,7 +41,7 @@ tbd.
 ### Home Assistant add-ons
 
 * AdGuard Home
-* [Ansible Vault](https://alxx.nl/hassio-addons/tree/master/ansible-vault)
+* [Bitwarden secrets for Home Assistant](https://alxx.nl/home-assistant-addons/tree/master/bitwarden-secrets)
 * Bitwarden RS
 * Check Home Assistant configuration
 * Git pull
@@ -49,10 +49,10 @@ tbd.
 * MariaDB
 * Mosquitto broker
 * Plex Media Server
-* [Rclone](https://alxx.nl/hassio-addons/tree/master/rclone)
+* [Rclone](https://alxx.nl/home-assistant-addons/tree/master/rclone)
 * Samba share
 * Tautulli
-* [Traefik](https://alxx.nl/hassio-addons/tree/master/traefik)
+* [Traefik](https://alxx.nl/home-assistant-addons/tree/master/traefik)
 * WireGuard
 * deCONZ
 
