@@ -8,6 +8,7 @@ nav:
   - Home: index.md
   - Installation: hardware/host-system.md
   - Add-ons:
+    - Bitwarden: add-ons/bitwarden.md
     - InfluxDB: 
       - Installation: add-ons/influxdb.md
       - Backup and restore: add-ons/influxdb-backup.md
