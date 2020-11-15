@@ -18,8 +18,9 @@ nav:
       - Backup and restore: add-ons/influxdb-backup.md
       - Downsampling (RP/CQ): add-ons/influxdb-downsampling.md
   - Homelab:
-    - Enabling QNAP disk spindown: misc/qnap-disk-spindown.md
-    - Mounting QNAP disks in Debian Linux: misc/qnap-linux-mount.md
+    - Enabling QNAP disk spindown: homelab/qnap-disk-spindown.md
+    - Mounting QNAP disks in Debian Linux: homelab/qnap-linux-mount.md
+    - Plex QSV transcoding fix: homelab/plex-transcoding-fix.md
 
 theme:
   name: 'material'
