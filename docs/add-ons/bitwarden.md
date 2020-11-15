@@ -34,7 +34,8 @@ docker exec -it addon_a0d7b954_bitwarden cat /data/config.json | jq -r '.admin_t
 
 This will print your admin token.
 
-> _**NOTE** This is an optional step._
+!!! note 
+    This is an optional step.
 
 ### Creating a Home Assistant organization entity
 
@@ -52,7 +53,8 @@ We are going to invite our earlier created Home Assistant user by clicking the *
 
 ![Invite local user](images/bitwarden-invite-user.png)
 
-> _**Note** we want this user to have access to all items!_
+!!! note 
+    We want this user to have access to all items!
 
 Finally we are going to confirm this user to have access to our Home Assistant organization. The user should automatically already have accepted the invite.
 

@@ -40,7 +40,8 @@ sudo apt-get update
 sudo apt-get install aptitude avahi-daemon bash curl dbus dnsutils git htop jq ncdu nmon socat sshpass vim
 ```
 
-> _Some of these packages are also required by Home Assistant later_
+!!! note 
+    Some of these packages are also required by Home Assistant later.
 
 ### Additional settings
 
@@ -91,7 +92,8 @@ systemctl enable docker
 exit
 ```
 
-> _Before installing Docker, check if the steps above are still relevant!_
+!!! note 
+    Before installing Docker, check if the steps above are still relevant!
 
 #### Docker group (optional)
 

@@ -4,7 +4,8 @@ I like to enable disk spindown within my NAS to save on power consumption. This 
 
 With some online resources I found a way to truly enable QNAP disk spindown.
 
-> _**NOTE** This is advanced usage. Please bear in mind that this modifies your default NAS behaviour._
+!!! note 
+    This is advanced usage. Please bear in mind that this modifies your default NAS behaviour.
 
 ## Requirements
 
@@ -17,7 +18,8 @@ QTS creates a RAID1 array across all your drives inside of your NAS for it's OS 
 
 However we rebuild this array once a day to keep our data synced to all our drives. Just in case a drive failure occurs. More on that later.
 
-> _**NOTE** I've added this script to my `/shares/scripts/` directory, but it can also be placed inside of your `/root/` (or `~`) directory._
+!!! note 
+    I've added this script to my `/shares/scripts/` directory, but it can also be placed inside of your `/root/` (or `~`) directory.
 
 ### Finding out which drives to disable
 
@@ -75,7 +77,8 @@ for disk in ${HDDS}; do
 done
 ```
 
-> _**NOTE** You should modify the `HDDS` parameter to suit your NAS and drive configuration._
+!!! note 
+    You should modify the `HDDS` parameter to suit your NAS and drive configuration.
 
 ### Rebuilding the QTS RAID1 array
 

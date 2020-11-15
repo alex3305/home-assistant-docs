@@ -61,7 +61,8 @@ mount /dev/vg289/lv2/ /mnt/qnap
 
 Et voila. This mounted my QNAP locally on my Linux box. 
 
-> _**NOTE** This guide will also work with Debian derivatives, such as Ubuntu Linux_
+!!! note 
+    This guide will also work with Debian derivatives, such as Ubuntu Linux
 
 ## References
 

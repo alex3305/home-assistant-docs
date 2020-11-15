@@ -74,4 +74,5 @@ docker network rm influxdb
 rm -rf /home/${USER}/dump/influxdb
 ```
 
-> _**Note** these steps must be done locally_
+!!! note 
+    These steps must be done locally.

@@ -56,7 +56,8 @@ As you can see I added several directories and added `.managed-by-hacs` placehol
 
 After adding these directories and placeholder files, you can commit these changes to Git. When you have verified your changes in your Home Assistant install, you can now continue installing HACS.
 
-> _**NOTE** [`appdaemon`](https://hacs.xyz/docs/categories/appdaemon_apps), [`netdaemon`](https://hacs.xyz/docs/categories/netdaemon_apps) and [`python_scripts`](https://hacs.xyz/docs/categories/python_scripts) are optional and not enabled by default. They are not required if you don't use them!!_
+!!! note 
+    [`appdaemon`](https://hacs.xyz/docs/categories/appdaemon_apps), [`netdaemon`](https://hacs.xyz/docs/categories/netdaemon_apps) and [`python_scripts`](https://hacs.xyz/docs/categories/python_scripts) are optional and not enabled by default. They are not required if you don't use them!!
 
 ### `configuration.yaml`
 
@@ -69,4 +70,5 @@ frontend:
 
 You will, possibly, also need to set up your `configuration.yaml` for your `custom_components`, but that's up to the integrations that you install.
 
-> _**NOTE** Refer to the [`appdaemon`](https://hacs.xyz/docs/categories/appdaemon_apps), [`netdaemon`](https://hacs.xyz/docs/categories/netdaemon_apps) and [`python_scripts`](https://hacs.xyz/docs/categories/python_scripts) documentation on how to setup those._
+!!! note 
+    Refer to the [`appdaemon`](https://hacs.xyz/docs/categories/appdaemon_apps), [`netdaemon`](https://hacs.xyz/docs/categories/netdaemon_apps) and [`python_scripts`](https://hacs.xyz/docs/categories/python_scripts) documentation on how to setup those.
