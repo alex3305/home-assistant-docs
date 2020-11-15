@@ -30,8 +30,6 @@ theme:
     accent: teal
   icon:
     logo: material/home-heart
-  features:
-    - navigation.tabs
 
 markdown_extensions:
   - admonition
