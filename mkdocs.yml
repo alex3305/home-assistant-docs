@@ -6,7 +6,9 @@ repo_name: 'alex3305/home-assistant-docs'
 repo_url: 'https://github.com/alex3305/home-assistant-docs/'
 nav:
   - Home: index.md
-  - Installation: hardware/host-system.md
+  - Custom installation: hardware/host-system.md
+  - Home Assistant:
+    - HACS: home-assistant/hacs.md
   - Add-ons:
     - Bitwarden: add-ons/bitwarden.md
     - InfluxDB: 

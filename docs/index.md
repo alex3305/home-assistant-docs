@@ -41,13 +41,12 @@ tbd.
 ### Home Assistant add-ons
 
 * AdGuard Home
-* [Bitwarden secrets for Home Assistant](https://alxx.nl/home-assistant-addons/tree/master/bitwarden-secrets)
+* [Bitwarden secrets for Home Assistant](add-ons/bitwarden.md)
 * Bitwarden RS
 * Check Home Assistant configuration
 * Git pull
 * [InfluxDB](add-ons/influxdb.md)
 * MariaDB
-* Mosquitto broker
 * Plex Media Server
 * [Rclone](https://alxx.nl/home-assistant-addons/tree/master/rclone)
 * Samba share
