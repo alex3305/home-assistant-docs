@@ -11,13 +11,14 @@ nav:
     - IKEA TRADFRI open/close remote: hardware/ikea-tradfri-open-close-remote.md
   - Home Assistant:
     - HACS: home-assistant/hacs.md
-  - Add-ons:
+  - Home Assistant Add-ons:
     - Bitwarden: add-ons/bitwarden.md
     - InfluxDB: 
       - Installation: add-ons/influxdb.md
       - Backup and restore: add-ons/influxdb-backup.md
       - Downsampling (RP/CQ): add-ons/influxdb-downsampling.md
-  - Miscellaneous:
+  - Homelab:
+    - Enabling QNAP disk spindown: misc/qnap-disk-spindown.md
     - Mounting QNAP disks in Debian Linux: misc/qnap-linux-mount.md
 
 theme:
