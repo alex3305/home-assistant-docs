@@ -6,7 +6,8 @@ This was unacceptable to me, so I tried mounting my new shiny QNAP NAS disk (rea
 
 All in all this was a bit harder than anticipated, so I documented my steps.
 
-> _**NOTE** This guide may not work for every RAID setup, but can provide a simple reference_
+!!! note 
+    This guide may not work for every RAID setup, but can provide a simple reference.
 
 ## QNAP side
 
@@ -18,7 +19,8 @@ I did not opt for a Storage Pool, because data redundency was not my primary goa
 
 Within Debian I had to install two packages first.
 
-> _**NOTE** All these steps require root (`sudo`)!_
+!!! note 
+    All these steps require root (`sudo`)!
 
 ```bash
 apt update

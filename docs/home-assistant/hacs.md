@@ -6,7 +6,8 @@
 
 More information regarding installation of HACS can be found on the [Installation page](https://hacs.xyz/docs/installation/prerequisites) of the HACS documentation.
 
-> _**NOTE** If you want to use Git pull with HACS, please set up your Git repository (like below) first before installing HACS. You will make your life significantly easier for yourself!_
+!!! note 
+    If you want to use Git pull with HACS, please set up your Git repository (like below) first before installing HACS. You will make your life significantly easier for yourself!
 
 ## HACS and Git pull add-on
 
