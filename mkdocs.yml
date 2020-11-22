@@ -6,11 +6,12 @@ repo_name: 'alex3305/home-assistant-docs'
 repo_url: 'https://github.com/alex3305/home-assistant-docs/'
 nav:
   - Home: index.md
-  - Custom installation: hardware/host-system.md
+  - Custom installation: installation/host-system.md
   - Hardware:
     - IKEA TRADFRI open/close remote: hardware/ikea-tradfri-open-close-remote.md
   - Home Assistant:
     - HACS: home-assistant/hacs.md
+    - Xiaomi Tokens: home-assistant/xiaomi-tokens.md
   - Home Assistant Add-ons:
     - Bitwarden: add-ons/bitwarden.md
     - InfluxDB: 
