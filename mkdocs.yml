@@ -9,6 +9,7 @@ nav:
   - Custom installation: installation/host-system.md
   - Hardware:
     - IKEA TRADFRI open/close remote: hardware/ikea-tradfri-open-close-remote.md
+    - Silvercrest LED String Lights: hardware/silvercrest-led-string-lights.md
   - Home Assistant:
     - HACS: home-assistant/hacs.md
     - Xiaomi Tokens: home-assistant/xiaomi-tokens.md

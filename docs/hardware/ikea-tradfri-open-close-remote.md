@@ -2,21 +2,25 @@
 
 ![TRADFRI open/close remote](images/ikea-tradfri-open-close-remote.jpg)
 
-**Zigbee ID**: TRADFRI open/close remote
+## Device attributes
 
-## Power
+### Connectivity
+
+This device is connected through Zigbee.
+
+### Power
 
 This device is battery powered with a **CR2023**.
 
-### Battery life
+#### Battery life
 
 Unknown.
 
-## Factory reset
+### Factory reset
 
 Open the back of the remote and press the pairing button 4 times.
 
-## Pairing
+### Pairing (Phoson)
 
 Pairing is done by factory resetting the remote. Pairing should happen automatically within Phoscon.
 
