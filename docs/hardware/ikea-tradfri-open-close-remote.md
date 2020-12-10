@@ -1,5 +1,7 @@
 # IKEA TRÅDFRI open/close remote
 
+This remote is bundled with the IKEA FYRTUR or KADRILJ, but can be used independently.
+
 ![TRADFRI open/close remote](images/ikea-tradfri-open-close-remote.jpg)
 
 ## Device attributes

@@ -1,5 +1,7 @@
 # Silvercrest LED String Lights
 
+This nice set of Zigbee LED String Lights was sold at Lidl as a new device from their Smart Home line. The device seems to be manufactured by Tuya.
+
 ![Silvercrest LED String Lights](https://www.lidl-service.com/static/5019460647/pic/main.jpeg)
 
 ## Device attributes
@@ -99,5 +101,6 @@ Sometimes the device can appear as `Heiman TS0601`. To fix this, just read the Z
 
 ## References
 
+* [Device manuals](https://www.lidl-service.com/cps/rde/xchg/SID-1FC8C7D5-504DC4E3/lsp/hs.xsl/product.html?id=5019460647&title=LED-verlichtingsketting&count=1)
 * [deCONZ REST API - Getting Started](https://dresden-elektronik.github.io/deconz-rest-doc/getting_started/)
 * [ebaauw in dresden-elektronik/deconz-rest-plugin!3716](https://github.com/dresden-elektronik/deconz-rest-plugin/issues/3716#issuecomment-735467996)
