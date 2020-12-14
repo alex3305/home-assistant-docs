@@ -2,6 +2,9 @@
 
 When utilizing Plex transcoding with Quick Sync Video the output can be broken on newer Intel systems. Which is also the case on my Intel J4105 processor. However there is a quick fix available.
 
+!!! note
+    This issue seems resolved with Plex Media Server version 1.21.1.3766.
+
 !!! note 
     Usage of Quick Sync Video is a Plex Pass feature.
 
