@@ -19,6 +19,7 @@ nav:
       - Installation: add-ons/influxdb.md
       - Backup and restore: add-ons/influxdb-backup.md
       - Downsampling (RP/CQ): add-ons/influxdb-downsampling.md
+    - VSCode: add-ons/vscode.md
   - Homelab:
     - Enabling QNAP disk spindown: homelab/qnap-disk-spindown.md
     - Mounting QNAP disks in Debian Linux: homelab/qnap-linux-mount.md
