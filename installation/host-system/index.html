@@ -1,0 +1,956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Compilation and reference of important home automation">
+      
+      
+      
+      
+        <meta name="author" content="Alex van den Hoogen">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Custom installation - Alex's Home Assistant documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#02a6f2">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="light-blue" data-md-color-accent="teal">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#home-assistant-host-and-install" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Alex&#39;s Home Assistant documentation" class="md-header-nav__button md-logo" aria-label="Alex's Home Assistant documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12l10-9 10 9h-3v8H5v-8H2m10 6l.72-.66C15.3 15 17 13.46 17 11.57c0-1.54-1.21-2.75-2.75-2.75-.87 0-1.7.41-2.25 1.05a3.007 3.007 0 00-2.25-1.05C8.21 8.82 7 10.03 7 11.57c0 1.89 1.7 3.43 4.28 5.77L12 18z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Alex's Home Assistant documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Custom installation
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/alex3305/home-assistant-docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alex3305/home-assistant-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Alex&#39;s Home Assistant documentation" class="md-nav__button md-logo" aria-label="Alex's Home Assistant documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 12l10-9 10 9h-3v8H5v-8H2m10 6l.72-.66C15.3 15 17 13.46 17 11.57c0-1.54-1.21-2.75-2.75-2.75-.87 0-1.7.41-2.25 1.05a3.007 3.007 0 00-2.25-1.05C8.21 8.82 7 10.03 7 11.57c0 1.89 1.7 3.43 4.28 5.77L12 18z"/></svg>
+
+    </a>
+    Alex's Home Assistant documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/alex3305/home-assistant-docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    alex3305/home-assistant-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Custom installation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Custom installation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debian-install" class="md-nav__link">
+    Debian install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-packages" class="md-nav__link">
+    Additional packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-settings" class="md-nav__link">
+    Additional settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swappiness" class="md-nav__link">
+    Swappiness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-user" class="md-nav__link">
+    Root user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-install" class="md-nav__link">
+    Docker install
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-group-optional" class="md-nav__link">
+    Docker group (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgroup-policies-optional" class="md-nav__link">
+    CGroup policies (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-optional" class="md-nav__link">
+    Docker compose (optional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home-assistant-installation" class="md-nav__link">
+    Home Assistant installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-it" class="md-nav__link">
+    That's it!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Hardware
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Hardware" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Hardware
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hardware/ikea-tradfri-open-close-remote/" class="md-nav__link">
+      IKEA TRADFRI open/close remote
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hardware/silvercrest-led-string-lights/" class="md-nav__link">
+      Silvercrest LED String Lights
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Home Assistant
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Home Assistant" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Home Assistant
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../home-assistant/hacs/" class="md-nav__link">
+      HACS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../home-assistant/xiaomi-tokens/" class="md-nav__link">
+      Xiaomi Tokens
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Home Assistant Add-ons
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Home Assistant Add-ons" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Home Assistant Add-ons
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../add-ons/bitwarden/" class="md-nav__link">
+      Bitwarden
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" >
+    <label class="md-nav__link" for="nav-5-2">
+      InfluxDB
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="InfluxDB" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        <span class="md-nav__icon md-icon"></span>
+        InfluxDB
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../add-ons/influxdb/" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../add-ons/influxdb-backup/" class="md-nav__link">
+      Backup and restore
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../add-ons/influxdb-downsampling/" class="md-nav__link">
+      Downsampling (RP/CQ)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../add-ons/vscode/" class="md-nav__link">
+      VSCode
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6">
+      Homelab
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Homelab" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Homelab
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homelab/qnap-disk-spindown/" class="md-nav__link">
+      Enabling QNAP disk spindown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homelab/qnap-linux-mount/" class="md-nav__link">
+      Mounting QNAP disks in Debian Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../homelab/plex-transcoding-fix/" class="md-nav__link">
+      Plex QSV transcoding fix
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debian-install" class="md-nav__link">
+    Debian install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-packages" class="md-nav__link">
+    Additional packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-settings" class="md-nav__link">
+    Additional settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#swappiness" class="md-nav__link">
+    Swappiness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-user" class="md-nav__link">
+    Root user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-install" class="md-nav__link">
+    Docker install
+  </a>
+  
+    <nav class="md-nav" aria-label="Docker install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-group-optional" class="md-nav__link">
+    Docker group (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgroup-policies-optional" class="md-nav__link">
+    CGroup policies (optional)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-optional" class="md-nav__link">
+    Docker compose (optional)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home-assistant-installation" class="md-nav__link">
+    Home Assistant installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thats-it" class="md-nav__link">
+    That's it!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/alex3305/home-assistant-docs/edit/master/docs/installation/host-system.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="home-assistant-host-and-install">Home Assistant host and install</h1>
+<h2 id="hardware">Hardware</h2>
+<p>I've installed Home Assistant on an Intel NUC-like device, the <a href="https://www.gigabyte.com/nl/Mini-PcBarebone/GB-BLCE-4105-rev-10#ov">Gigabyte Brix GB-BLCE-4105</a> with the following specs:</p>
+<ul>
+<li><em>Processor</em> Intel Celeron J4105 (quad core)</li>
+<li><em>Memory</em> Corsair ValueSelect 8GB DDR4 SO-DIMM RAM (2x4GB)</li>
+<li><em>Storage</em> Samsung 60GB SLC SSD</li>
+</ul>
+<p>I chose the Gigabyte box instead of an Intel NUC because of the quad core Celeron processor. The J4105 is far newer than the (then alternative) J3455 and faster than the dual core J4005. Both having about the same price.</p>
+<p>For a slightly higher cost I put in 8GB of DDR4, which can be quite overkill as 4GB is sufficient for my complete system. </p>
+<p>Finally I settled on an old enterprise Samsung 60GB SLC SSD. Not the fastest drive in the world, but really robust because of the SLC memory that is used. I expect this drive to work for at least another 20 years.</p>
+<h2 id="software">Software</h2>
+<p>For my use case I have a custom Home Assistant install based on top of Debian Linux. I chose Debian Linux, because it is lighter and more barebones than for instance Ubuntu Linux. Also I'm familiar with Debian Linux because of the Raspbian distribution that I used earlier.</p>
+<h3 id="debian-install">Debian install</h3>
+<p>The Debian installation is fairly straight forward with only a few steps involved. You will need an USB thumb drive and a working internet connection.</p>
+<ol>
+<li>Download the latest stable version of Debian (server) from the <a href="http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/current/amd64/iso-cd/">non-free firmware repo</a>. This version contains all the proprietary kernel modules needed for network connectivity</li>
+<li>Put this ISO onto an USB thumb drive (ith the <a href="https://www.balena.io/etcher/">balenaEtcher</a> utility)</li>
+<li>Insert the thumb drive into the target device and boot the machine with the USB drive</li>
+<li>Follow the network install of Debian<ul>
+<li>I've ignored the <code>root</code> user</li>
+<li>I didn't set up an X environment</li>
+<li>Additionally installed SSH server</li>
+<li>Used the complete disk for provisioning</li>
+</ul>
+</li>
+</ol>
+<h3 id="additional-packages">Additional packages</h3>
+<p>After the install of Debian was complete. I opted to install some of my favorite CLI utilities:</p>
+<div class="highlight"><pre><span></span><code>sudo apt-get update
+sudo apt-get install aptitude avahi-daemon bash curl dbus dnsutils git htop jq ncdu nmon socat sshpass vim
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some of these packages are also required by Home Assistant later.</p>
+</div>
+<h3 id="additional-settings">Additional settings</h3>
+<h4 id="swappiness">Swappiness</h4>
+<p>I lower the swappiness of the system, to prevent using swap.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set up</span>
+sudo sysctl -w vm.swappiness<span class="o">=</span><span class="m">5</span>
+sudo <span class="nb">echo</span> <span class="s2">&quot;vm.swappiness=5&quot;</span> &gt;&gt; /etc/sysctl.conf
+
+<span class="c1"># Check if correctly configured</span>
+sysctl vm.swappiness
+cat /etc/sysctl.conf
+</code></pre></div>
+<h4 id="root-user">Root user</h4>
+<p>We didn't set up a <code>root</code> user during install. This is fine, since we can use <code>sudo</code>, but prevents us from getting into safe mode when 💩 hits the fan. So we set up a password for the <code>root</code> user.</p>
+<div class="highlight"><pre><span></span><code>sudo su
+passwd
+</code></pre></div>
+<h3 id="docker-install">Docker install</h3>
+<p>It's quite easy to install Docker. We use the <a href="https://docs.docker.com/engine/install/debian/">official documentation</a> as a reference for this step.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># First we change to root mode</span>
+sudo -i
+
+apt update
+apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+
+curl -fsSL https://download.docker.com/linux/debian/gpg <span class="p">|</span> apt-key add -
+add-apt-repository <span class="s2">&quot;deb [arch=amd64] https://download.docker.com/linux/debian </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&quot;</span>
+apt update
+
+apt install docker-ce docker-ce-cli containerd.io
+
+<span class="c1"># This is optional, but I like to know for sure that the Docker unit file is enabled</span>
+systemctl <span class="nb">enable</span> docker
+
+<span class="c1"># Finally we exit root mode</span>
+<span class="nb">exit</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before installing Docker, check if the steps above are still relevant!</p>
+</div>
+<h4 id="docker-group-optional">Docker group (optional)</h4>
+<p>We can also add ourselves to the Docker group. This removes the requirement of using <code>sudo</code> when we want to do anything with the Docker cli. This is an optional step.</p>
+<div class="highlight"><pre><span></span><code>sudo groupadd docker
+sudo usermod -aG docker <span class="nv">$USER</span>
+</code></pre></div>
+<h4 id="cgroup-policies-optional">CGroup policies (optional)</h4>
+<p>On my system, the CGroup policies were not set. I had to amend my Grub bootloader, by adding/replacing the following line in <code>/etc/default/grub</code>:</p>
+<div class="highlight"><pre><span></span><code>GRUB_CMDLINE_LINUX=&quot;cgroup_enable=memory swapaccount=1&quot;
+</code></pre></div>
+<p>After which you can reload grub with <code>sudo update-grub</code> and reboot your system to have it take affect.</p>
+<h4 id="docker-compose-optional">Docker compose (optional)</h4>
+<p>I like to have Docker compose installed. Completely optional, but quite easy to do, according to the <a href="https://docs.docker.com/compose/install/">official documentation</a>:</p>
+<div class="highlight"><pre><span></span><code>sudo curl -L <span class="s2">&quot;https://github.com/docker/compose/releases/download/1.27.4/docker-compose-</span><span class="k">$(</span>uname -s<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname -m<span class="k">)</span><span class="s2">&quot;</span> -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+</code></pre></div>
+<h3 id="home-assistant-installation">Home Assistant installation</h3>
+<p>We do a simple <a href="">supervised installation</a> of Home Assistant:</p>
+<div class="highlight"><pre><span></span><code>sudo -i
+
+curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh <span class="p">|</span> bash -s
+
+<span class="nb">exit</span>
+</code></pre></div>
+<h2 id="thats-it">That's it!</h2>
+<p>This completes a complete Home Assistant install on your new, spanking machine. Check out Home Assistant on: <code>http://[LOCAL_IP_ADDRESS]:8123</code>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../hardware/ikea-tradfri-open-close-remote/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                IKEA TRADFRI open/close remote
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
