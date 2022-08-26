@@ -41,6 +41,25 @@ md9 : active raid1 sdd[3] sdb[2] sda[1] nvme0n1p4[0]
 
 Since I've installed an NVMe drive, I only want to retain that drive for my QTS storage. Remember the other drives, because you will need to edit the scripts below to fit your storage solution.
 
+### Identifying which drives
+As drive letters may change during reboots (e.g., sda can become sdb in some cases) it's good to positively identify the different devices in some way. Parted can help with this:
+
+```sudo parted -lms 2>/dev/null | grep "/dev/sd"```
+Parted options are: l(ist), m(achine readable) and s(ilent - no user interaction required). Wihtout sudo parted will not show any response. Output is expected to look like the following. *Note - this example from another device that does not use an NVMe disk, but a cheap Kingston A400.* You should be able to recognize your different drives here by either the capacity and/or the name. 
+
+```
+/dev/sda:240GB:scsi:512:512:gpt:KINGSTON SA400S37240G:;
+/dev/sdb:4001GB:scsi:512:4096:gpt:WDC WD40EFZX-68AWUN0:;
+/dev/sdc:4001GB:scsi:512:4096:gpt:WDC WD40EFZX-68AWUN0:;
+/dev/sdd:4001GB:scsi:512:4096:gpt:WDC WD40EFZX-68AWUN0:;
+```
+
+We can now add some ```awk``` in-line text editing sauce to turn this into a list of HDD's we want to disable from the RAID:
+
+```sudo parted -lms 2>/dev/null | grep "WDC WD40EFZX-68AWUN0" | awk '{print substr($0, 6, 3)} ' | awk '$1=$1' ORS=' '```
+
+Which in this case should return ```sdb sdc sdd``` (but may return other drive letters in case the system decides to swap them around at the next boot up...).
+
 ### Disconnecting the QTS RAID1 array
 
 First up we add a script to disconnect our internal QTS RAID1 array.
@@ -48,7 +67,8 @@ First up we add a script to disconnect our internal QTS RAID1 array.
 ```bash
 #!/bin/bash
 
-HDDS="sda sdb sdd"
+# replace the "WDC WD40EFZX-68AWUN0" with the applicable name for your devices!
+HDDS=$(parted -lms 2>/dev/null | grep "WDC WD40EFZX-68AWUN0" | awk '{print substr($0, 6, 3)} ' | awk '$1=$1' ORS=' ')
 
 errquit() {
     STATUS=1
