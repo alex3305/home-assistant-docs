@@ -41,7 +41,7 @@ md9 : active raid1 sdd[3] sdb[2] sda[1] nvme0n1p4[0]
 
 Since I've installed an NVMe drive, I only want to retain that drive for my QTS storage. Remember the other drives, because you will need to edit the scripts below to fit your storage solution.
 
-### Identifying which drives
+### Consistent idenfitication of drive names
 As drive letters may change during reboots (e.g., sda can become sdb in some cases) it's good to positively identify the different devices in some way. Parted can help with this:
 
 ```sudo parted -lms 2>/dev/null | grep "/dev/sd"```
